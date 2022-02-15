@@ -89,6 +89,39 @@
 
     }
 
+    @media(max-width: 1320px) {
+        .sidebar-menu {
+            height: 10vh;
+            width: 100%;
+            justify-content: start;
+
+            .menu-bars {
+                transform: translate(50%, -180%);
+            }
+            
+        }
+
+        .nav-menu {
+            border: none;
+        }
+
+        .navbar-toggle {
+            display: none;
+        }
+
+        .nav-menu.active {
+            position: absolute;
+            left: 40%;
+            transform: translate(0, -70%);
+        }
+        
+        li {
+            .control-panel {
+                color: white;
+            }
+        }
+    }
+
 }
 
 

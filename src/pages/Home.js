@@ -3,7 +3,7 @@ import EventHistory from '../components/Main/EventHistory/EventHistory'
 import Inspections from '../components/Main/Inspections/Inspections'
 import Schedule from '../components/Main/Schedule/Schedule'
 import ActionPlansTable from '../components/Aside/ActionPlanTable/ActionPlansTable'
-import ActionPlanChart from '../components/Main/ActionPlanChart/ActionPlanChart'
+import ActionPlan from '../components/Main/ActionPlanChart/ActionPlan'
 import AsideActionPlan from '../components/Aside/ActionPlanChart/AsideActionPlans'
 
 
@@ -21,7 +21,7 @@ export default function Home() {
 
                 <div className='cards'>
                     <Inspections />
-                    <ActionPlanChart />
+                    <ActionPlan />
                 </div>
 
                 <div className='schedule'>

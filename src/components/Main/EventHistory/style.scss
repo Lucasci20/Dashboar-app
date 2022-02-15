@@ -27,4 +27,25 @@
             align-items: center;
         }
     }
+
+    .chart {
+        padding-top: 10px;
+        height: 250px;
+    }
+
+    @media(max-width: 850px) {
+        height: 400px;
+
+        .chart {
+            height: 330px;
+        }
+    }
+
+    @media(max-width: 670px) {
+        .chart {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+
 }

@@ -13,8 +13,8 @@ export default function Sidebar() {
 
     return (
         <div className="sidebar">
-            <div className="sidebar-menu" onClick={ShowSidebar} >
-                <i className="menu-bars" >
+            <div className="sidebar-menu" >
+                <i className="menu-bars" onClick={ShowSidebar}>
                     <IoMenuOutline/>
                 </i>
             </div>

@@ -1,34 +1,34 @@
-import Chart from 'react-apexcharts';
+import { useState, useEffect } from "react";
+import Chart from "react-apexcharts";
+import axios from "axios";
 
-import React, { Component } from 'react'
+const CircleChart = () => {
+  const [options, setObject] = useState({
+    series: [],
+    labels: [],
+  });
 
-class CircleChart extends Component {
+  const [series, setSeries] = useState([58, 34.9, 6.5]);
 
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          options: { 
-              chart: {
-                  type: 'donut'
-              }
-           },
-          series: [58, 34.9, 6.5],
-          chartOptions: {
-              labels: ['A', 'B', 'C'],
-          }
-         
-        }
-      }
-    
-      render() {
-    
-        return (
-          <>
-            <Chart options={this.state.options} series={this.state.series} type="donut" width="100%" height="100%"/>
-          </>
-        );
-      }
-}
+  useEffect(() => {
+    axios.get("https://www.dnd5eapi.co/api/spells/acid-arrow/").then((response) => {
+      console.log('Res', response)
+      response.data.components.map((item) =>{
+        console.log('it', item) 
+      })
+    })
+  }, [])
+  return (
+    <>
+      <Chart
+        options={options}
+        series={series}
+        type="donut"
+        width="100%"
+        height="100%"
+      />
+    </>
+  );
+};
 
-export default CircleChart
+export default CircleChart;

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
 
-const ActionPlanChart = () => {
-  const [options, setOptions] = useState({
+
+const InspectionsChart = () => {
+  const [options, setObject] = useState({
     series: [58, 34.9, 6.5],
     labels: ["A", "B", "C"],
   });
@@ -23,4 +24,4 @@ const ActionPlanChart = () => {
   );
 };
 
-export default ActionPlanChart;
+export default InspectionsChart;
