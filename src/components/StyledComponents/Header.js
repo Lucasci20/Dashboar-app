@@ -7,6 +7,8 @@ const Header = styled.header`
     i {
         font-size: 24px;
     }
+
+    
 `
 
 export default Header

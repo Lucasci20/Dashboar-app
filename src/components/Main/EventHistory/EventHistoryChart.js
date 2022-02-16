@@ -12,6 +12,7 @@ const EventHistoryChart = () => {
     xaxis: {
       categories: [],
     },
+  
   });
 
   const [series, setSeries] = useState([
@@ -31,7 +32,7 @@ const EventHistoryChart = () => {
         response.data.data.map((item) => {
           //console.log("item", item);
           age.push(item.employee_age);
-          salary.push(item.employee_salary);
+          salary.push(item.id);
         });
         setObject({
           chart: {
@@ -49,7 +50,7 @@ const EventHistoryChart = () => {
             data: age,
           },
         ]);
-        console.log("age", age, salary);
+       // console.log("age", age, salary);
       })
       .catch((e) => {
         alert("Erro ao carregar informações da API");

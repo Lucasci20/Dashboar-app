@@ -42,9 +42,23 @@
     }
 
     @media(max-width: 670px) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
         .chart {
             overflow-x: auto;
+            overflow-y: hidden;
             white-space: nowrap;
+        }
+    }
+
+    @media(max-width: 480px) {
+        header {
+            flex-direction: column;
+            
+            select {
+                margin-top: 10px;
+            }
         }
     }
 

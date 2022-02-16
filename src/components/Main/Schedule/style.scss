@@ -21,4 +21,46 @@
             width: 244px;
         }
     }
+
+    .table {
+        width: 100%;
+        thead {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+
+            tr {
+                display: flex;
+                justify-content: space-between;
+                width: 35%;
+            }
+        }
+        tr {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+
+            tbody {
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                width: 35%;
+
+                .number {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    
+    @media(max-width: 480px) {
+        header {
+            flex-direction: column;
+            
+            select {
+                margin-top: 10px;
+            }
+        }
+    }
 }

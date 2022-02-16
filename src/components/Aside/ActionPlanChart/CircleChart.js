@@ -8,16 +8,14 @@ const CircleChart = () => {
     labels: [],
   });
 
-  const [series, setSeries] = useState([58, 34.9, 6.5]);
+  const [series, setSeries] = useState([55,44,31,4,77]);
 
   useEffect(() => {
-    axios.get("https://www.dnd5eapi.co/api/spells/acid-arrow/").then((response) => {
-      console.log('Res', response)
-      response.data.components.map((item) =>{
-        console.log('it', item) 
-      })
+    axios.get("https://fakerapi.it/api/v1/companies?_quantity=5").then((response) => {
+      console.log("res", response)
     })
   }, [])
+   
   return (
     <>
       <Chart
@@ -29,6 +27,5 @@ const CircleChart = () => {
       />
     </>
   );
-};
-
+}
 export default CircleChart;
