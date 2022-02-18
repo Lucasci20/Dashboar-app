@@ -7,8 +7,8 @@ const EventHistoryChart = () => {
   const [options, setObject] = useState({
     chart: {
       id: "apexchart-example",
-      redrawOnParentResize: true,
     },
+
     xaxis: {
       categories: [],
     },
@@ -24,7 +24,7 @@ const EventHistoryChart = () => {
 
   useEffect(() => {
     const age = [];
-    const salary = [];
+    const Id = [];
     axios
       .get("https://dummy.restapiexample.com/api/v1/employees")
       .then((response) => {
@@ -32,7 +32,7 @@ const EventHistoryChart = () => {
         response.data.data.map((item) => {
           //console.log("item", item);
           age.push(item.employee_age);
-          salary.push(item.id);
+          Id.push(item.id);
         });
         setObject({
           chart: {
@@ -40,7 +40,7 @@ const EventHistoryChart = () => {
             redrawOnParentResize: true,
           },
           xaxis: {
-            categories: salary,
+            categories: Id,
           },
         });
 
@@ -52,9 +52,7 @@ const EventHistoryChart = () => {
         ]);
        // console.log("age", age, salary);
       })
-      .catch((e) => {
-        alert("Erro ao carregar informações da API");
-      });
+      
   }, []);
 
   return (
@@ -63,7 +61,7 @@ const EventHistoryChart = () => {
         options={options}
         series={series}
         type="bar"
-        width="100%"
+        width= '100%'
         height="100%"
       />
     </>

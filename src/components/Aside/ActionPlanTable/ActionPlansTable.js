@@ -39,10 +39,14 @@ export default function ActionPlansTable() {
             </TitleH3>
           </div>
           <div className="date">
-            <Status>
-              Realizado
-            </Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
+            <div className="buttons">
+            <Status>Pendente</Status>
+            <span><BsChevronRight/></span>
+              <Status>
+                Realizado
+              </Status>
+              <Subtitle>10:45 10/10/10</Subtitle>
+            </div>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
     width: 48%;
     height: 370px;
 
@@ -15,6 +15,14 @@ const CardContainer = styled.div`
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
 
+    .chart {
+    height: 230px;
+
+    .apexcharts-legend.apx-legend-position-right {
+        display: none;
+    }
+}
+
     @media(max-width: 1320px) {
         margin-top: 15px;
     }
@@ -22,6 +30,7 @@ const CardContainer = styled.div`
     @media(max-width: 850px) {
         width: 100%;
     }
+    @media(max-width: 440px) {
+        height: 380px;
+    }
 `
-
-export default CardContainer
