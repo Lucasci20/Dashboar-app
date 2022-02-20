@@ -15,7 +15,7 @@ const ActionPlanChart = () => {
     axios
       .get("https://fakerapi.it/api/v1/companies?_quantity=5")
       .then((response) => {
-        console.log("res", response);
+        //console.log("res", response);
         response.data.data.map((item) => {
           Id.push(item.id);
         });

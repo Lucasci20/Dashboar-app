@@ -1,5 +1,3 @@
-import { FiSettings } from "react-icons/fi";
-
 import Title from "../../StyledComponents/Title";
 import Select from "../../StyledComponents/Select";
 import Input from "../../StyledComponents/Input";
