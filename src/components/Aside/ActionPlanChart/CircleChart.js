@@ -3,26 +3,27 @@ import Chart from "react-apexcharts";
 import axios from "axios";
 
 const CircleChart = () => {
-  const [options, setObject] = useState({
+  const [options] = useState({
     labels: [],
   });
 
-  const [series, setSeries] = useState([55,44,31,4,77]);
+  const [series, setSeries] = useState([]);
 
   useEffect(() => {
-    const age = []
+    let age = [];
 
-    axios.get("https://dummy.restapiexample.com/api/v1/employees").then((response) => {
-      console.log("res", response)
-      response.data.data.map((item) => {
-        age.push(item.employee_age)
-      })
+    axios
+      .get("https://dummy.restapiexample.com/api/v1/employees")
+      .then((response) => {
+        console.log("res", response);
+        response.data.data.map((item) => {
+          age.push(item.employee_age);
+        });
+        age.splice(6);
+        setSeries(age);
+      });
+  }, []);
 
-      setSeries([age])
-
-    })
-  }, [])
-   
   return (
     <>
       <Chart
@@ -34,5 +35,5 @@ const CircleChart = () => {
       />
     </>
   );
-}
+};
 export default CircleChart;

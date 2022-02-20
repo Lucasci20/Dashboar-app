@@ -1,66 +1,78 @@
 .schedule-container {
-    height: 328px;
+  height: 328px;
 
-    margin-top: 14px;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    padding-left: 23px;
-    padding-right: 10px;
+  margin-top: 14px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 23px;
+  padding-right: 10px;
 
-    border: 0.5px solid #E4E4E4;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+  border: 0.5px solid #e4e4e4;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
 
+  header {
+    align-items: center;
+
+    padding-left: 9px;
+    padding-right: 9px;
+
+    .select {
+      width: 244px;
+    }
+  }
+
+  .table {
+    width: 100%;
+    text-align: left;
+
+    th {
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 8px;
+      padding: 4px 16px;
+    }
+
+    td {
+      font-size: 10px;
+      font-family: "Poppins", sans-serif;
+      padding: 8px 16px;
+      border-bottom: 0.5px solid #ebebeb;
+      color: #333333;
+    }
+
+    .data {
+      width: 120px;
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
     header {
-        align-items: center;
+      flex-direction: column;
 
-        padding-left: 9px;
-        padding-right: 9px;
-
-        .select {
-            width: 244px;
-        }
+      select {
+        margin-top: 10px;
+      }
     }
+  }
 
+  @media (max-width: 690px) {
     .table {
-        width: 100%;
-        thead {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
 
-            tr {
-                display: flex;
-                justify-content: space-between;
-                width: 35%;
-            }
-        }
-        tr {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-
-            tbody {
-                display: flex;
-                justify-content:space-between;
-                align-items: center;
-                width: 35%;
-
-                .number {
-                    margin-left: 15px;
-                }
-            }
-        }
+      .data {
+        width: 60%;
+      }
     }
-
-    
-    @media(max-width: 480px) {
-        header {
-            flex-direction: column;
-            
-            select {
-                margin-top: 10px;
-            }
-        }
-    }
+  }
 }

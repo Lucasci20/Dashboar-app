@@ -1,59 +1,58 @@
 .container {
-    display: flex;
-    background-color:#FAFAFA;
-    
+  display: flex;
+  background-color: #fafafa;
+
+  main {
+    width: 65%;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+
+    h1 {
+      margin-left: 26px;
+      margin-top: 33px;
+
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  aside {
+    width: 35%;
+    margin-top: 83px;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 1320px) {
+    flex-direction: column;
+
     main {
-        width: 65%;
-        margin-left: 30px;
-        margin-bottom: 50px;
-        margin-right: 30px;
+      width: 100%;
+      margin: auto;
 
-        h1 {
-            margin-left: 26px;
-            margin-top: 33px;
-
-            font-family: 'Poppins', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 25px;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-top: 10px;
-        }
+      .cards {
+        margin: 0;
+      }
     }
 
     aside {
-        width: 35%;
-        margin-top: 83px;
-        margin-right: 20px;
+      width: 100%;
+      margin: auto;
     }
+  }
 
-    @media(max-width: 1320px) {
-        flex-direction: column;
-
-        main {
-            width: 100%;
-            margin: auto;
-
-            .cards {
-                margin: 0;
-            }
-        }
-
-        aside {
-            width: 100%;
-            margin: auto;
-        }
-
+  @media (max-width: 850px) {
+    .cards {
+      flex-direction: column;
     }
-
-    @media(max-width: 850px) {
-        .cards {
-            flex-direction: column;
-        }
-    }
+  }
 }

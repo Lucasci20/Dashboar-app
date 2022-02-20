@@ -1,133 +1,126 @@
 .sidebar {
+  display: flex;
+  left: 0;
+  background-color: #fafafa;
+
+  .sidebar-menu {
+    height: 100%;
+    width: 51px;
     display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #0db2d6 8.12%, #4fda91 71.62%);
+
+    .menu-bars {
+      position: relative;
+      display: flex;
+      top: 136px;
+      height: 20px;
+
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 24px;
+      padding-bottom: 26px;
+
+      font-size: 25px;
+      background-color: #fafafa;
+      border-radius: 10rem;
+      color: #333333;
+
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .menu-bars:hover {
+      background-color: #6b6b6b;
+      color: #fafafa;
+    }
+  }
+
+  .nav-menu {
+    width: 228px;
+    top: 0;
+
+    border-right: 1px solid #bababa;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: -100%;
+    transition: 0.5s;
+  }
+
+  .nav-menu.active {
     left: 0;
-    background-color: #fafafa;
+    position: relative;
+    transition: ease-out 0.3s;
+  }
 
+  li {
+    margin-top: 6rem;
 
+    .control-panel {
+      font-size: 20px;
+      color: #0794b2;
+      i {
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+      }
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    position: relative;
+    display: flex;
+    left: 183px;
+    bottom: 50px;
+    i {
+      color: #fff;
+      font-size: 15px;
+      clip-path: circle();
+
+      background-color: #0794b2;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1320px) {
     .sidebar-menu {
-        height: 100%;
-        width: 51px;
-        display: flex;
-        justify-content: center;
-        background: linear-gradient(180deg, #0db2d6 8.12%, #4fda91 71.62%);
+      height: 10vh;
+      width: 100%;
+      justify-content: start;
 
-        .menu-bars {
-            position: relative;
-            display: flex;
-            top: 136px;
-            height: 20px;
-
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 24px;
-            padding-bottom: 26px;
-
-            font-size: 25px;
-            background-color: #fafafa;
-            border-radius: 10rem;
-            color: #333333;
-
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        .menu-bars:hover {
-            background-color: #6b6b6b;
-            color: #fafafa;
-        }
+      .menu-bars {
+        transform: translate(50%, -180%);
+      }
     }
 
     .nav-menu {
-        width: 228px;
-        top: 0;
-
-        border-right: 1px solid #bababa;
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        left: -100%;
-        transition: .5s;
-    }
-
-    .nav-menu.active {
-        left: 0;
-        position: relative;
-        transition: ease-out .3s;
-    }
-
-    li {
-        margin-top: 6rem;
-
-        .control-panel {
-            font-size: 20px;
-            color: #0794B2;
-            i {
-                position: relative;
-                top: 3px;
-                margin-right: 5px;
-            }
-            span {
-                font-size: 18px;
-            }
-            
-        }
+      border: none;
     }
 
     .navbar-toggle {
-        position: relative;
-        display: flex;
-        left: 183px;
-        bottom: 50px;
-        i {
-            color: #fff;
-            font-size: 15px;
-            clip-path: circle();
-
-            background-color: #0794b2;
-            cursor: pointer;
-        }
-
+      display: none;
     }
 
-    @media(max-width: 1320px) {
-        .sidebar-menu {
-            height: 10vh;
-            width: 100%;
-            justify-content: start;
-
-            .menu-bars {
-                transform: translate(50%, -180%);
-            }
-            
-        }
-
-        .nav-menu {
-            border: none;
-        }
-
-        .navbar-toggle {
-            display: none;
-        }
-
-        .nav-menu.active {
-            position: absolute;
-            left: 40%;
-            transform: translate(0, -70%);
-        }
-        
-        li {
-            .control-panel {
-                color: white;
-            }
-        }
+    .nav-menu.active {
+      position: absolute;
+      left: 40%;
+      transform: translate(0, -70%);
     }
 
-    @media(max-width: 400px) {
-        .nav-menu.active {
-            left: 30%;
-        }
+    li {
+      .control-panel {
+        color: white;
+      }
     }
+  }
 
+  @media (max-width: 400px) {
+    .nav-menu.active {
+      left: 30%;
+    }
+  }
 }
-
-
