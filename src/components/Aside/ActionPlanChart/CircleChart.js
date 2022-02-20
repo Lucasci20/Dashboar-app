@@ -16,7 +16,7 @@ const CircleChart = () => {
       .get("https://dummy.restapiexample.com/api/v1/employees")
       .then((response) => {
         console.log("res", response);
-        response.data.data.map((item) => {
+        response.data.data.forEach((item) => {
           age.push(item.employee_age);
         });
         age.splice(6);

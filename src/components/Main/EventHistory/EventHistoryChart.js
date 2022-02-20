@@ -12,7 +12,6 @@ const EventHistoryChart = () => {
     xaxis: {
       categories: [],
     },
-  
   });
 
   const [series, setSeries] = useState([
@@ -29,7 +28,7 @@ const EventHistoryChart = () => {
       .get("https://dummy.restapiexample.com/api/v1/employees")
       .then((response) => {
         //console.log("response", response);
-        response.data.data.map((item) => {
+        response.data.data.forEach((item) => {
           //console.log("item", item);
           age.push(item.employee_age);
           Id.push(item.id);
@@ -50,9 +49,8 @@ const EventHistoryChart = () => {
             data: age,
           },
         ]);
-       // console.log("age", age, salary);
-      })
-      
+        // console.log("age", age, salary);
+      });
   }, []);
 
   return (
@@ -61,7 +59,7 @@ const EventHistoryChart = () => {
         options={options}
         series={series}
         type="bar"
-        width= '100%'
+        width="100%"
         height="100%"
       />
     </>

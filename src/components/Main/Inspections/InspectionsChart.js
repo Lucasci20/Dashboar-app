@@ -16,7 +16,7 @@ const InspectionsChart = () => {
       .get("https://fakerapi.it/api/v1/companies?_quantity=5")
       .then((response) => {
         //console.log("res", response);
-        response.data.data.map((item) => {
+        response.data.data.forEach((item) => {
           Id.push(item.id);
         });
         Id.splice(3);
