@@ -18,6 +18,7 @@ export const CardContainer = styled.div`
   .chart {
     height: 230px;
     overflow-x: auto;
+    overflow-y: hidden;
 
     .apexcharts-legend.apx-legend-position-right {
       display: none;
