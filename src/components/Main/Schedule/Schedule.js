@@ -21,28 +21,32 @@ export default function Schedule() {
       <div className="input">
         <Input />
       </div>
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th className="data">Planejado</th>
-            <th className="data">Realizado</th>
-            <th className="data">Última atualização</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ScheduleData.map((item, index) => {
-            return (
-              <tr>
-                <td key={index}>{item.name}</td>
-                <td className="data">{item.planned}</td>
-                <td className="data">{item.accomplished}</td>
-                <td className="data">{item.lastUpdate}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="table-wrapper">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th className="data">Planejado</th>
+              <th className="data">Realizado</th>
+              <th className="data">Última atualização</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ScheduleData.map((item, index) => {
+              return (
+                <tr>
+                  <td className="name" key={index}>
+                    {item.name}
+                  </td>
+                  <td className="data">{item.planned}</td>
+                  <td className="data">{item.accomplished}</td>
+                  <td className="data">{item.lastUpdate}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
