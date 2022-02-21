@@ -31,6 +31,7 @@
   .chart {
     padding-top: 10px;
     height: 250px;
+    overflow-x: auto;
   }
 
   .info {
@@ -68,7 +69,6 @@
 
     .chart {
       min-width: 500px;
-      overflow-x: auto;
     }
   }
 
