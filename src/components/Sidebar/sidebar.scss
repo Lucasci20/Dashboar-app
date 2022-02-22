@@ -13,21 +13,26 @@
     .menu-bars {
       position: relative;
       display: flex;
+      align-items: center;
       top: 136px;
       height: 20px;
 
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 24px;
-      padding-bottom: 26px;
+      padding: 35px 20px;
 
       font-size: 25px;
       background-color: #fafafa;
+      border: none;
       border-radius: 10rem;
       color: #333333;
 
       cursor: pointer;
       transition: 0.3s;
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .menu-bars:hover {
@@ -94,6 +99,8 @@
 
       .menu-bars {
         transform: translate(50%, -180%);
+
+        padding: 30px 18px;
       }
     }
 
