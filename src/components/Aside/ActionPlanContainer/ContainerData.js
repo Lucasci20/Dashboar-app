@@ -1,6 +1,3 @@
-import { BsChevronRight } from "react-icons/bs";
-import Status from "../../StyledComponents/Status";
-
 export const ContainerData = [
   {
     name: "Plano de ação 1",
