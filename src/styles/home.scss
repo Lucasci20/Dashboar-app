@@ -32,7 +32,17 @@
     margin-right: 20px;
   }
 
-  @media (max-width: 1320px) {
+  @media (max-width: 1366px) {
+    main {
+      width: 785px;
+    }
+
+    aside {
+      min-width: 330px;
+    }
+  }
+
+  @media (max-width: 1180px) {
     flex-direction: column;
 
     main {
