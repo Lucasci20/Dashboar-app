@@ -15,7 +15,7 @@ const CircleChart = () => {
     axios
       .get("https://dummy.restapiexample.com/api/v1/employees")
       .then((response) => {
-        console.log("res", response);
+        // console.log("res", response);
         response.data.data.forEach((item) => {
           age.push(item.employee_age);
         });

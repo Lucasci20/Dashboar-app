@@ -34,10 +34,8 @@ export default function Schedule() {
           <tbody>
             {ScheduleData.map((item, index) => {
               return (
-                <tr>
-                  <td className="name" key={index}>
-                    {item.name}
-                  </td>
+                <tr key={index}>
+                  <td className="name">{item.name}</td>
                   <td className="data">{item.planned}</td>
                   <td className="data">{item.accomplished}</td>
                   <td className="data">{item.lastUpdate}</td>
