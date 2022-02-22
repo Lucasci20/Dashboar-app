@@ -4,10 +4,9 @@ import Input from "../../StyledComponents/Input";
 import Select from "../../StyledComponents/Select";
 import TitleH3 from "../../StyledComponents/TitleH3";
 import Status from "../../StyledComponents/Status";
-import Divider from "../../StyledComponents/Divider";
 import Header from "../../StyledComponents/Header";
 
-//import ContainerData from "./ContainerData";
+import { ContainerData } from "./ContainerData";
 
 import { BsChevronRight } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
@@ -33,129 +32,28 @@ export default function ActionPlansContainer() {
       </div>
 
       <section className="content">
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <div className="buttons">
-              <Status>Pendente</Status>
-              <span>
-                <BsChevronRight />
-              </span>
-              <Status>Realizado</Status>
-              <Subtitle>10:45 10/10/10</Subtitle>
+        {ContainerData.map((item, index) => {
+          return (
+            <div key={index} className="action-plan-status">
+              <div className="name">
+                <TitleH3>
+                  {item.name}
+                  <p>responsável: {item.responsible}</p>
+                </TitleH3>
+              </div>
+              <div className="date">
+                <div className="buttons">
+                  <Status className={item.class}>Pendente</Status>
+                  <span className={item.class}>
+                    <BsChevronRight />
+                  </span>
+                  <Status>Realizado</Status>
+                  <Subtitle>10:45 10/10/10</Subtitle>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
-
-        <Divider />
-
-        <div className="action-plan-status">
-          <div className="name">
-            <TitleH3>
-              Nome do plano de ação
-              <p>responsável: Bruno Barros</p>
-            </TitleH3>
-          </div>
-          <div className="date">
-            <Status>Realizado</Status>
-            <Subtitle>10:45 10/10/10</Subtitle>
-          </div>
-        </div>
+          );
+        })}
       </section>
     </div>
   );

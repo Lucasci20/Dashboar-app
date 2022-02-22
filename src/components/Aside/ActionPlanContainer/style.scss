@@ -37,6 +37,9 @@
 
       margin-top: 14px;
       margin-bottom: 5px;
+      padding-bottom: 5px;
+
+      border-bottom: 1px solid #ebebeb;
 
       .name {
         h3 {
@@ -56,6 +59,16 @@
           span {
             position: relative;
             top: 3px;
+          }
+
+          .disabled {
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          .active {
+            visibility: visible;
+            opacity: 1;
           }
         }
 
