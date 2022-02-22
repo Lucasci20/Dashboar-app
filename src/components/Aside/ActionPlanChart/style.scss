@@ -1,4 +1,4 @@
-.aside-action-plans-container {
+.aside-action-plans-chart {
   height: 360px;
 
   padding-top: 13px;
@@ -30,5 +30,6 @@
 
   @media (max-width: 1180px) {
     width: 100%;
+    margin-top: 15px;
   }
 }
