@@ -1,5 +1,5 @@
 .action-container {
-  height: 704px;
+  height: 707px;
 
   margin-top: 10px;
   padding-top: 7px;
@@ -40,6 +40,10 @@
       padding-bottom: 5px;
 
       border-bottom: 1px solid #ebebeb;
+
+      &:last-child {
+        border: 0;
+      }
 
       .name {
         h3 {
